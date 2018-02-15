@@ -1,0 +1,35 @@
+\documentclass[notheorems,mathserif,table,envcountsect,UTF8]{beamer}
+\input{body/pack}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+ \begin{CJK*}{GBK}{kai}
+%%-------------------------------------------------
+    \title[\textcolor{white}{Mathematica计算高次谐波}]
+    {Mathematica计算高次谐波}
+    \author[\kaishu\textcolor{white}{李玉轩}]
+    {\makebox[2cm][s]{答辩人}:\ \ 李玉轩\\ \qquad\ % \ \ \ \ \ \ \
+     \makebox[2cm][s]{指导教师}:\ \ 王国利\ 教授}
+    \institute{\kaishu\textcolor{olive}{西北师范大学\ 物理与电子工程学院}}
+    \date[\initclock\tdtime]{ \number\year 年 \number\month 月 \number\day 日}%{xxxx~年~xx~月~xx~日}
+    \frame{\frametitle{\qquad 西北师范大学~物电学院~本科答辩}\titlepage}
+%%---------------------------------------------------------------------------------------------------
+\begin{frame}[allowframebreaks]
+%%%选项[allowframebreaks]使得随内容自动分成几页幻灯片,缺点是不能使用\pause命令控制分步显示
+\frametitle{\heiti\sanhao Contents}
+ \setcounter{section}{-1}
+\section*{Contents}\tableofcontents
+\end{frame}
+%%---------------------------------------------------------------------------------------------------
+%%---------------------------------------------------------------------------------------------------
+\input{body/Abstractcn}                %%%中文摘要
+\input{body/Abstracten}                %%%英文摘要
+\input{body/pre}                       %%%前言
+\input{body/chap1}                     %%%第一章
+\input{body/chap2}                     %%%第二章
+\input{body/conclude}                  %%%结论
+\input{body/bib}                       %%%参考文献
+%\input{body/achievement}               %%%研究成果
+\input{body/thanks}                    %%%致谢
+
+ \end{CJK*}
+\end{document}

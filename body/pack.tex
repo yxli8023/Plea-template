@@ -1,0 +1,123 @@
+%%%导言区,慎动!!!
+\usepackage[timeinterval=1]{tdclock}          %可以在幻灯片中显示时钟
+\beamersetaveragebackground{black!10}         %背景设置
+\usetheme{Boadilla}                           %主题设定，标题、作者、时钟显示在页面下方
+\useoutertheme[height=0.1\textwidth,width=0.15\textwidth,hideothersubsections]{sidebar}
+\usecolortheme{dolphin}      % Outer color themes, 其他选择: whale, seahorse, dolphin . 换一个编译看看有什么不同.
+\usecolortheme{lily}     % Inner color themes, 其他选择: lily, orchid
+\useinnertheme[shadow]{rounded} % 对 box 的设置: 圆角、有阴影.
+\setbeamercolor{sidebar}{bg=blue!50} % sidebar的颜色, 50%的蓝色.
+\setbeamercolor{background canvas}{bg=blue!9} % 背景色, 9%的蓝色. 去掉下一行, 试一试这个.
+%\setbeamertemplate{background canvas}[vertical shading][bottom=white,top=structure.fg!25]
+%%背景色, 上25%的蓝, 过渡到下白.
+\usefonttheme{serif}  % 字体. 个人偏好有轮廓的字体. 去掉这个设置编译, 就看到不同了.
+%\setbeamertemplate{navigation symbols}{}   %% 去掉页面下方默认的导航条.
+%%------------------------常用宏包---------------------------------------------------------------------
+%%注意, beamer 会默认使用下列宏包: amsthm, graphicx, hyperref, color, xcolor, 等等
+\usepackage{amssymb,amsbsy,bm}
+\usepackage{ctex, mflogo}%中文环境
+\usepackage{indentfirst}%%使首行缩进
+\usepackage{subfigure} %%图形或表格并排排列
+\usepackage{xmpmulti}  %%支持文中的 \multiinclude 等命令, 使 mp 文件逐帧出现. 具体讨论见 beamer 手册.
+\usepackage{colortbl,dcolumn}     %% 彩色表格
+\usepackage{graphicx}% 图片引用
+\usepackage{epstopdf}% eps图像
+\usepackage{caption}
+\usepackage{amsmath}
+\setbeamerfont{caption}{size=\tiny}
+\setbeamertemplate{caption}[numbered]%图片编号
+\graphicspath{{beamerfigures/}}         %% 图片路径. 本文的图片都放在这个文件夹里了.
+\DeclareGraphicsRule{*}{mps}{*}{} %% 使 pdflatex 可以纳入 metapost 做的图片.
+\logo{\includegraphics[height=0.085\textwidth]{nwnu.pdf}}%% 师大校徽.
+
+\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
+\raggedright %% 中文对齐
+
+\setlength{\parindent}{1.5em}  %%首行缩进距离定义
+
+\def\hilite<#1>{\temporal<#1>{\color{blue!35}}{\color{magenta}}{\color{blue!75}}}
+%% 自定义命令, 源自 beamer_guide.
+%% item 逐步显示时, 使已经出现的item、正在显示的item、将要出现的item 呈现不同颜色.
+
+\newcolumntype{H}{>{\columncolor{blue!20}}c!{\vrule}}
+%\newcolumntype{H}{>{\columncolor{blue!20}}c}  %% 表格设置
+%==================================参考文献==============================================================
+\newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}}  %自定义命令\upcite, 使参考文献引用以上标出现
+\DeclareMathOperator{\arccot}{arccot}
+%%%是为了定义数学算子格式的一个例子. 【与模板本身无关, 实际使用中可以删除.】
+\bibliographystyle{plain}
+\def\BIB#1{\par\hangindent\parindent\indent\llap{\qquad [#1] \enspace}\ignorespaces}    %%%使参考文献编号突出
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%重定义字体、字号命令 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\songti}{\CJKfamily{song}}        % 宋体
+\renewcommand{\fangsong}{\CJKfamily{fs}}        % 仿宋体
+\renewcommand{\kaishu}{\CJKfamily{kai}}         % 楷体
+\renewcommand{\heiti}{\CJKfamily{hei}}          % 黑体
+%\newcommand{\lishu}{\CJKfamily{li}}           % 隶书
+%\newcommand{\youyuang}{\CJKfamily{you}}       % 幼圆
+\newcommand{\yihao}{\fontsize{22pt}{\baselineskip}\selectfont}      % 字号设置
+\newcommand{\erhao}{\fontsize{19pt}{\baselineskip}\selectfont}      % 字号设置
+\newcommand{\sanhao}{\fontsize{16pt}{\baselineskip}\selectfont}     % 字号设置
+\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}      % 字号设置
+\newcommand{\xiaosihao}{\fontsize{12pt}{\baselineskip}\selectfont}  % 字号设置
+\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}    % 字号设置
+\newcommand{\xiaowuhao}{\fontsize{9pt}{\baselineskip}\selectfont}   % 字号设置
+\newcommand{\liuhao}{\fontsize{7.875pt}{\baselineskip}\selectfont}  % 字号设置
+\newcommand{\qihao}{\fontsize{5.25pt}{\baselineskip}\selectfont}    % 字号设置
+
+\def\K{\quad}    %%%产生一个空格
+\def\KK{\qquad}  %%%产生两个空格
+
+\renewcommand{\vec}[1]{\mbos{\boldmath$#1$}}  %%%向量格式
+
+\newcommand{\me}{\mathrm{e}}                  %%%数学常数 e
+\newcommand{\mi}{\mathrm{i}}                  %%%数学常数 i
+\newcommand{\dif}{\mathrm{d}}                 %%%微分记号 d
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%----------------------- Theorems ---------------------------------------------------------------------
+\newtheorem{theorem}{定理}
+\newtheorem{definition}{定义}
+\newtheorem{lemma}{引理}
+\newtheorem{corollary}{推论}
+\newtheorem{proposition}{性质}
+\newtheorem{example}{例}
+\newtheorem{remark}{注}
+
+\renewcommand\figurename{\rm 图}
+\renewcommand\tablename{\bf 表}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\renewcommand{\baselinestretch}{1.1}
+\setcounter{secnumdepth}{4}
+%%----------------------------------------------------------------------------------------------------
+%\input{amssymb.sty}
+\def\bf{\heiti}
+\def\N{\mathbb{N}}
+ \def\Z{\mathbb{Z}}
+  \def\Q{\mathbb{Q}}
+   \def\R{\mathbb{R}}
+    \def\C{\mathbb{C}}
+     \def\F{\mathbb{F}}
+      \def\D{{\mathbb{D}}}
+       \def\H{{\mathcal{H}}}
+        \def\B{{\mathcal{B}}}
+         \def\A{{\mathcal{A}}}
+\def\S{\sum}
+ \def\J{\sum}
+  \def\<{\langle}
+   \def\>{\rangle}
+
+
+\def\Lb{\Large\bf}
+ \def\tr{\mbox{tr}}
+  \def\span{\mbox{span}}
+   \def\O{\oplus}
+   \def\cyr{\tencyr}
+\def\Bbb{\tenBbb}
+\def\txt{\tenthxt}
+\newfont{\htxt}{eufm10 scaled \magstep0}
+\font\tenthxt=eufm10 scaled \magstep0 \font\tenBbb=msbm10 scaled
+\magstep0 \font\tencyr=wncyr10 scaled \magstep0 \font\tenrm=cmr10
+scaled \magstep0
+%%---------------------------------------------------------------------------------------------------
+\listfiles     %%列出使用的文件清单

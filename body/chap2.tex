@@ -1,0 +1,107 @@
+%%%第二章
+\section[第二章]{第二章\ 在高次谐波产生中自旋角动量和可调谐极化}
+%%-------------------------------------------------
+\begin{frame}\frametitle{Part 2\ 在HHG中自旋角动量和可调谐极化}
+\begin{center}{\heiti Part 2\ 在HHG中自旋角动量和可调谐极化}\end{center}
+\end{frame}
+%%-------------------------------------------------
+%%-------------------------------------------------
+%%第一节
+\subsection{2.1\ 圆形场的HHG中的自旋守恒}
+\begin{frame}\frametitle{Part 2\ 在HHG中自旋角动量和可调谐极化}
+\begin{center}{\heiti\sihao {2.1  \ 圆形场的HHG中的自旋守恒 }}\end{center}
+
+\end{frame}
+%-----------------------------------------------------
+\begin{frame}\frametitle{2.1\ 圆形场的HHG中的自旋守恒 }
+\begin{figure}
+\centering                                                         
+\includegraphics[width=10cm,height=3cm]{picture/EXPresult.jpg}\\
+\centering                                                          %子图居中
+\includegraphics[width=10cm,height=3cm]{picture/experiment_set.png}
+\caption{实验设置及结果}
+\end{figure}
+\end{frame}
+%====================理论解释====================
+\begin{frame}\frametitle{2.1\ 圆形场的HHG中的自旋守恒 }
+\begin{center}Model 1\end{center}
+\begin{equation}
+\textbf{E}=\frac{E_{0}e^{i\omega t}}{2\sqrt{2}}(\frac{1+\epsilon}{\sqrt{1+\epsilon^{2}}}\hat{\textbf{e}}_{R}+\frac{1-\epsilon}{\sqrt{1+\epsilon^{2}}}\hat{\textbf{e}}_{L})\label{field}
+\end{equation}
+\begin{equation}
+\Omega_{(n_{1},n_{2})}=n_{1}\omega+n_{2}r\omega
+\end{equation}
+\begin{equation}
+\langle\hat{\sigma}\rangle=\frac{2\epsilon}{1+\epsilon^2}\footnote{$\langle\hat{\sigma}\rangle=\sin{(2\alpha)}$,$\epsilon=\tan{(\alpha)}$}
+\end{equation}
+\begin{equation}
+\langle\sigma_{(n_{1},n_{2})}\rangle=n_{1}\langle\sigma_{1}\rangle+n_{2}\langle\sigma_{2}\rangle+\delta_{(n_{1},n_{2})}
+\end{equation}
+\end{frame}
+
+\begin{frame}\frametitle{2.1\ 圆形场的HHG中的自旋守恒 }
+\begin{center}Model 2\end{center}
+\begin{equation}
+\textbf{E}=\frac{E_{0}e^{i\omega t}}{2}(\cos{(\delta\alpha)}\hat{\textbf{e}}_{R}+\sin{(\delta\alpha)}\hat{\textbf{e}}_{L})+c.c\footnote{$\delta\alpha=\alpha-\pi/4$,$\epsilon=\tan{(\alpha)}$}
+\end{equation}
+\begin{equation}
+\Omega_{(n_{+},n_{-};n_{2})}=(n_{+}+n_{-})\omega+n_{2}r\omega
+\end{equation}
+\begin{equation}
+\sigma_{(n_{+},n_{-};n_{2})}=n_{+}\sigma_{+}+n_{-}\sigma_{-}+n_{2}\sigma_{2}\footnote{$\sigma_{+}=+1$，$\sigma_{-}=\sigma_{2}=-1$}
+\end{equation}
+
+\end{frame}
+%===============================================
+\begin{frame}\frametitle{2.1\ 圆形场的HHG中的自旋守恒 }
+\begin{center}模拟结果\end{center}
+\begin{figure}[htbp]
+\centering                                                          %居中
+\subfigure{                    %第一张子图
+\begin{minipage}{3.5cm}
+\centering                                                          %子图居中
+\includegraphics[scale=0.6]{picture/bicolor.eps}   
+\caption{右旋圆极化}
+\end{minipage}}\subfigure{                    %第二张子图
+\begin{minipage}{7cm}
+\centering                                                          %子图居中
+\includegraphics[scale=0.6]{picture/bicolor2.eps}                %以pic.jpg的0.5倍大小输出
+\caption{左旋圆极化}
+\end{minipage}} %                         %大图名称                                                       %图片引用标记
+\end{figure}
+\end{frame}
+%%-------------------------------------------------
+%%第二节
+\subsection{2.2\  子通道分裂}
+\begin{frame}\frametitle{Part 2\ 在HHG中自旋角动量和可调谐极化}
+\begin{center}
+{\heiti\xiaosihao {2.2\ 子通道分裂}}
+\end{center}
+\end{frame}
+\begin{frame}\frametitle{2.2\ 子通道分裂}
+\begin{center}Model 3\end{center}
+\begin{equation}
+\textbf{E}=\frac{E_{0}}{2}(\cos{(\delta\alpha)}e^{-i\omega t}\hat{\textbf{e}}_{R}+\sin{(\delta\alpha)}e^{-i\omega^{'} t}\hat{\textbf{e}}_{L})\label{field4}
+\end{equation}
+\begin{equation}
+\Omega_{(n_{+},n_{-};n_{2})}=n_{+}\omega+n_{-}\omega^{'}+n_{2}r\omega
+\end{equation}
+\end{frame}
+
+\begin{frame}\frametitle{2.2\ 子通道分裂}
+\begin{center}模拟结果\end{center}
+\begin{figure}[htbp]
+\centering                                                          %居中
+\subfigure{                    %第一张子图
+\begin{minipage}{3.5cm}
+\centering                                                          %子图居中
+\includegraphics[scale=0.6]{picture/detuning2.eps} 
+\caption{右旋圆极化}
+\end{minipage}}\subfigure{                    %第二张子图
+\begin{minipage}{7cm}
+\centering                                                          %子图居中
+\includegraphics[scale=0.6]{picture/detuning1.eps}                %以pic.jpg的0.5倍大小输出
+\caption{左旋圆极化}
+\end{minipage}}
+\end{figure}
+\end{frame}

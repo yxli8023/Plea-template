@@ -1,0 +1,111 @@
+%%%%%第一章
+\section[第一章]{第一章\ 高次谐波的计算 }
+%%-------------------------------------------------
+\begin{frame}\frametitle{Part 1~高次谐波的计算}
+\begin{center}{\heiti Part 1~高次谐波的计算}\end{center}
+\end{frame}
+%%-------------------------------------------------
+%%-------------------------------------------------
+%%第一节
+\subsection{1.1\ 软件介绍}
+\begin{frame}\frametitle{Part 1~高次谐波的计算}
+\begin{center}
+{\heiti\sihao{1.1\ 软件介绍}}
+\end{center}
+Mathematica 是一款科学计算软件，很好地结合了数值和符号计算引擎、图形系统、
+编程语言、文本系统、和与其他应用程序的高级连接。很多功能在相应领域内处于世界
+领先地位，它也是使用最广泛的数学软件之一。Mathematica 的发布标志着现代科技计
+算的开始。Mathematica 是世界上通用计算系统中最强大的系统。自从 1988 发布以来，
+它已经对如何在科技和其它领域运用计算机产生了深刻的影响。
+\end{frame}
+%%-------------------------------------------------
+\begin{frame}\frametitle{1.1\ 软件介绍}
+本论文通过强场近似的方法来研究氢原子在强场中产生高次谐波的现象，通过
+Mathematica 软件编写程序包 \text{(RB-SFA)} 来求解强场近似中相关方程。
+本程序由 Emilio Pisanty 编写开发，是一种紧凑和灵活的 Mathematica 软件程序包，
+通过强场近似的方法来计算高次谐波。它结合了 Mathematica 的分析集成能力与其数值计算能力，
+为计算谐波谱和其他属性提供了一个快速友好的交互式操作。此外，它可以计算一阶非
+线性修正 强场近似结果，以确定驱动激光器的磁场对谐波光谱的影响。
+\end{frame}
+%%第二节
+\subsection{1.2\ 计算结果}
+\begin{frame}\frametitle{1.2\ 计算结果}
+\begin{center}
+{\heiti\sihao{1.2\ 计算结果}}
+\end{center}
+\end{frame}
+%%-------------------------------------------------
+% 利用列表的方式来讲多幅图放置到同一页中
+% 该方法较为复杂，且无法给每一幅图增加说明
+%\begin{frame}\frametitle{1.2\ 计算结果}
+%  \begin{columns}
+%            \column{0.5\textwidth}
+%            \begin{minipage}[c][0.4\textheight][c]{\linewidth}
+%                \centering
+%                \includegraphics[width=0.8\linewidth]{picture/compone.eps}
+%                %\caption{谐波截止位置随场强的变化}
+%            \end{minipage}
+%             \hspace{10pt}%
+%            \begin{minipage}[c][0.4\textheight][c]{\linewidth}
+%                %\centering
+%                \includegraphics[width=0.8\linewidth]{picture/exp1.eps}
+%                %\caption{谐波截止位置随波长的变化}
+%            \end{minipage}
+%
+%           \column{0.5\textwidth} % remember add this to the other clumn
+%            \begin{minipage}[c][0.4\textheight][c]{\linewidth}
+%                %\centering
+%                \includegraphics[width=0.8\linewidth]{picture/result1.eps}
+%                 %\caption{谐波截止位置随包络形式的变化}
+%            \end{minipage}
+%
+%            \begin{minipage}[c][0.4\textheight][c]{\linewidth}
+%               % \centering
+%                \includegraphics[width=0.8\linewidth]{picture/exp2.eps}
+%                %\caption{谐波截止位置随激光场初相位的变化}
+%            \end{minipage}
+%        \end{columns}  
+%\end{frame}
+
+%%-------------------------------------------------
+\begin{frame}\frametitle{1.2\ 计算结果}
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[t]{0.48\linewidth}
+\centering
+\centerline{\includegraphics[width=4cm]{picture/exp1.eps}}
+\caption{谐波截止位置随波长的变化}
+\end{minipage}
+\hfill 
+\begin{minipage}[t]{0.48\linewidth}
+\centerline{\includegraphics[width=4cm]{picture/exp2.eps}}
+\caption{谐波截止位置随激光场初相位的变化}
+\end{minipage}
+\vfill 
+\begin{minipage}[t]{0.48\linewidth}
+\centerline{\includegraphics[width=4cm]{picture/result1.eps}}
+\caption{谐波截止位置随包络形式的变化}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\linewidth}
+\centerline{\includegraphics[width=4cm]{picture/compone.eps}}
+\caption{谐波截止位置随场强的变化}
+\end{minipage}
+\end{figure}
+\end{frame}
+
+\begin{frame}\frametitle{1.2\ 计算结果}
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[t]{0.5\linewidth}
+\centering
+\centerline{\includegraphics[width=4cm]{picture/cos-pluse.eps}}
+\caption{余弦平方包络}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.5\linewidth}
+\centerline{\includegraphics[width=4cm]{picture/gauss-pluse.eps}}
+\caption{高斯包络}
+\end{minipage}
+\end{figure}
+\end{frame}
